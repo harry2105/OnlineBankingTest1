@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Parellel Test Suite]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Internet Explorer">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Test.OnlineBankingTest"/>
+    </classes>
+  </test> <!-- Internet Explorer -->
+</suite> <!-- Failed suite [Parellel Test Suite] -->

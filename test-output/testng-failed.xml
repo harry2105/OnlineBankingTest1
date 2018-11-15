@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Online Banking Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Chrome Test(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="Test.OnlineBankingTest">
+        <methods>
+          <include name="invalidLogin"/>
+          <include name="setUp"/>
+          <include name="ValidateAccountHistory"/>
+          <include name="validLoginHomePage"/>
+          <include name="loadConfigFile"/>
+        </methods>
+      </class> <!-- Test.OnlineBankingTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test thread-count="5" name="IE Test(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="Test.OnlineBankingTest">
+        <methods>
+          <include name="invalidLogin"/>
+          <include name="setUp"/>
+          <include name="ValidateAccountHistory"/>
+          <include name="validLoginHomePage"/>
+          <include name="loadConfigFile"/>
+        </methods>
+      </class> <!-- Test.OnlineBankingTest -->
+    </classes>
+  </test> <!-- IE Test(failed) -->
+  <test thread-count="5" name="Firefox Test(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="Test.OnlineBankingTest">
+        <methods>
+          <include name="invalidLogin"/>
+          <include name="setUp"/>
+          <include name="ValidateAccountHistory"/>
+          <include name="validLoginHomePage"/>
+          <include name="loadConfigFile"/>
+        </methods>
+      </class> <!-- Test.OnlineBankingTest -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+</suite> <!-- Failed suite [Online Banking Test Suite] -->
